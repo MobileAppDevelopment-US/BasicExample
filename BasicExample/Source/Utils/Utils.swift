@@ -63,9 +63,9 @@ class Utill: NSObject {
         alert.addAction(UIAlertAction(title: "Ok",
                                       style: .default,
                                       handler: nil))
-        //DispatchQueue.main.async(execute: {
+        DispatchQueue.main.async(execute: {
             vc.present(alert, animated: true)
-       // })
+        })
     }
     
     class func showErrorAlertAndVC(_ message: String?, vc: UIViewController, success: VoidCompletion?) {
