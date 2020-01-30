@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z7f-fy-tnc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab BarVC-->
+        <scene sceneID="IUe-Lc-eGv">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarVC" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z7f-fy-tnc" customClass="TabBarVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="vnl-Bf-gGC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="rzp-sK-2Sr" kind="relationship" relationship="viewControllers" id="vS9-uS-6D1"/>
+                        <segue destination="kAg-tF-WrD" kind="relationship" relationship="viewControllers" id="Yfp-PA-Fnw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8A-Cv-Z57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2279" y="248"/>
+        </scene>
+        <!--ListUsersNVC-->
+        <scene sceneID="MH2-si-dY6">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ListUsersNVC" storyboardName="ListUsersVC" referencedIdentifier="ListUsersNVC" id="rzp-sK-2Sr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="chat" selectedImage="chatSelected" id="FGB-JC-d3C">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exh-1z-OQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2033" y="771"/>
+        </scene>
+        <!--MyProfileNVC-->
+        <scene sceneID="bQG-6J-BEF">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MyProfileNVC" storyboardName="MyProfileVC" referencedIdentifier="MyProfileNVC" id="kAg-tF-WrD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="yAC-06-fCr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xft-wh-DgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2482" y="771"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chat" width="16" height="16"/>
+        <image name="chatSelected" width="16" height="16"/>
+    </resources>
+</document>

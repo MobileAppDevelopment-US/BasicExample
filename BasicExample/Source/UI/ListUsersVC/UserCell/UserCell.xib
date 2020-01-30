@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UserCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="60" id="fwi-ZZ-HNv" customClass="UserCell" customModule="Example">
+            <rect key="frame" x="0.0" y="0.0" width="429" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fwi-ZZ-HNv" id="ZqW-ei-0di">
+                <rect key="frame" x="0.0" y="0.0" width="429" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3jQ-rc-wc1">
+                        <rect key="frame" x="20" y="10" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.019607843140000001" green="0.48627450979999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="3jQ-rc-wc1" secondAttribute="height" multiplier="1:1" id="VsK-yp-27G"/>
+                            <constraint firstAttribute="height" constant="40" id="ZKU-fm-bPt"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29H-lE-7zb">
+                        <rect key="frame" x="76" y="20.5" width="333" height="19.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3jQ-rc-wc1" firstAttribute="leading" secondItem="ZqW-ei-0di" secondAttribute="leading" constant="20" id="3Dm-xW-Euf"/>
+                    <constraint firstItem="29H-lE-7zb" firstAttribute="centerY" secondItem="ZqW-ei-0di" secondAttribute="centerY" id="99u-ag-5Xc"/>
+                    <constraint firstAttribute="trailing" secondItem="29H-lE-7zb" secondAttribute="trailing" constant="20" id="HMG-hx-V3F"/>
+                    <constraint firstItem="29H-lE-7zb" firstAttribute="leading" secondItem="3jQ-rc-wc1" secondAttribute="trailing" constant="16" id="HVi-w5-eca"/>
+                    <constraint firstItem="3jQ-rc-wc1" firstAttribute="centerY" secondItem="ZqW-ei-0di" secondAttribute="centerY" id="y7j-PN-nVV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="3jQ-rc-wc1" id="6Lz-XE-vQ0"/>
+                <outlet property="nameLabel" destination="29H-lE-7zb" id="NxK-T4-nfW"/>
+            </connections>
+            <point key="canvasLocation" x="119.56521739130436" y="-147.99107142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

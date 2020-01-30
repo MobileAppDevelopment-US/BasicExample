@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CSv-L8-aXa">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Users-->
+        <scene sceneID="c14-Me-ju5">
+            <objects>
+                <viewController storyboardIdentifier="ListUsersVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PQl-DS-Cuo" customClass="ListUsersVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ig-Qb-r7e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="370" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kyu-Dj-uHx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PQl-DS-Cuo" id="ueb-c8-vT6"/>
+                                    <outlet property="delegate" destination="PQl-DS-Cuo" id="Gml-Ol-bXf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tLK-N5-4sV" firstAttribute="trailing" secondItem="kyu-Dj-uHx" secondAttribute="trailing" id="BBw-5F-mFd"/>
+                            <constraint firstItem="kyu-Dj-uHx" firstAttribute="top" secondItem="tLK-N5-4sV" secondAttribute="top" id="fc6-I8-j9A"/>
+                            <constraint firstItem="tLK-N5-4sV" firstAttribute="bottom" secondItem="kyu-Dj-uHx" secondAttribute="bottom" id="mBs-8j-ZYx"/>
+                            <constraint firstItem="kyu-Dj-uHx" firstAttribute="leading" secondItem="tLK-N5-4sV" secondAttribute="leading" id="ovm-IC-P07"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tLK-N5-4sV"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="People" image="listUsers" selectedImage="listUsersSelected" id="r11-wv-Jf0"/>
+                    <navigationItem key="navigationItem" title="Users" id="po0-Ry-uQE"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="kyu-Dj-uHx" id="ixk-Po-Cit"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ohp-NC-kmX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-575.36231884057975" y="622.76785714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Kv-Rp-BDt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qzf-Ev-WSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="ListUsersNVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CSv-L8-aXa" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tgx-2U-Psz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PQl-DS-Cuo" kind="relationship" relationship="rootViewController" id="HoH-J3-QuI"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1420" y="623"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="listUsers" width="16" height="16"/>
+        <image name="listUsersSelected" width="16" height="16"/>
+    </resources>
+</document>

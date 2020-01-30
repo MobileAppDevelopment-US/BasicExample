@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cLg-ID-DDv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My profile-->
+        <scene sceneID="Ign-YZ-k6H">
+            <objects>
+                <viewController storyboardIdentifier="MyProfileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hWv-gi-REu" customClass="MyProfileVC" customModule="Example" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aGR-tN-KUc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9nG-m7-DaU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9nG-m7-DaU" firstAttribute="top" secondItem="cKl-7N-Ydn" secondAttribute="top" id="UHl-XK-EIh"/>
+                            <constraint firstItem="cKl-7N-Ydn" firstAttribute="trailing" secondItem="9nG-m7-DaU" secondAttribute="trailing" id="XPO-Dw-36S"/>
+                            <constraint firstItem="cKl-7N-Ydn" firstAttribute="bottom" secondItem="9nG-m7-DaU" secondAttribute="bottom" id="bF5-gU-gb6"/>
+                            <constraint firstItem="9nG-m7-DaU" firstAttribute="leading" secondItem="cKl-7N-Ydn" secondAttribute="leading" id="s4Y-jP-Go0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cKl-7N-Ydn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Profile" image="myProfile" selectedImage="myProfileSelected" id="W5b-vm-RAa"/>
+                    <navigationItem key="navigationItem" title="My profile" id="um2-U0-lme"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="9nG-m7-DaU" id="CHZ-3B-tP3"/>
+                        <outlet property="topConstraint" destination="UHl-XK-EIh" id="d76-m6-k45"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8H-Uc-sxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-575.36231884057975" y="-82.366071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="m3A-I9-Lnk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZM-K5-E7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="MyProfileNVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cLg-ID-DDv" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gy2-qj-5tA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hWv-gi-REu" kind="relationship" relationship="rootViewController" id="EDj-J0-QkW"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1349" y="-82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="myProfile" width="16" height="16"/>
+        <image name="myProfileSelected" width="16" height="16"/>
+    </resources>
+</document>
