@@ -46,6 +46,7 @@
 		CE9FB2C123D6FA6E0015148C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FB2C023D6FA6E0015148C /* AppDelegate.swift */; };
 		CE9FB2C323D6FA6E0015148C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FB2C223D6FA6E0015148C /* SceneDelegate.swift */; };
 		CE9FB2C523D6FA6E0015148C /* ListUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FB2C423D6FA6E0015148C /* ListUsersVC.swift */; };
+		CEE0412223EB0B0A005CC371 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE0412123EB0B0A005CC371 /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		CE9FB2C923D6FA720015148C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9FB2CC23D6FA720015148C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9FB2D423D6FDBA0015148C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = Example/SupportingFile/.gitignore; sourceTree = SOURCE_ROOT; };
+		CEE0412123EB0B0A005CC371 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +117,6 @@
 				AD43F28F2513D0147E0E3E06 /* Pods-BasicExample.debug.xcconfig */,
 				83B166E546F14B462F8AE1EC /* Pods-BasicExample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -160,6 +161,7 @@
 				CE1FBFB123E211C000BC86A6 /* UIImage+Ext.swift */,
 				CE1FBFB323E2122100BC86A6 /* UITextField+Ext.swift */,
 				CE49AA1E23E3518600486BC2 /* UIColor+Ext.swift */,
+				CEE0412123EB0B0A005CC371 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -463,6 +465,7 @@
 				CE9FB2C123D6FA6E0015148C /* AppDelegate.swift in Sources */,
 				CE1FBFB023E20DCD00BC86A6 /* UIViewController+Ext.swift in Sources */,
 				CE1FBF8A23E0C02B00BC86A6 /* CommonTypes.swift in Sources */,
+				CEE0412223EB0B0A005CC371 /* UIView+Ext.swift in Sources */,
 				CE1FBF9923E2015100BC86A6 /* Interest.swift in Sources */,
 				CE1FBFA123E205BA00BC86A6 /* Notification+Ext.swift in Sources */,
 				CE9FB2C323D6FA6E0015148C /* SceneDelegate.swift in Sources */,

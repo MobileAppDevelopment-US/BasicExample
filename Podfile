@@ -18,5 +18,9 @@ target 'BasicExample' do
   
   #pod 'Firebase/Analytics'
   pod 'Firebase/Messaging' # notification
+  
+  
+  
+  #pod 'ReachabilitySwift' # network check mobile, wifi, notAvailable and notifications when status changes
 
 end

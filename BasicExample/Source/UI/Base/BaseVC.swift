@@ -11,10 +11,12 @@ import JGProgressHUD
 
 class BaseVC: UIViewController {
     
+    //let networkClient = NetworkClient.sharedInstance
     var isActiveNextButton: Bool = false
-    var networkClient = NetworkClient()
+        
     private var hud: JGProgressHUD?
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +35,8 @@ class BaseVC: UIViewController {
         hideSpinner()
     }
     
+    // MARK: - Methods
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -181,7 +185,7 @@ extension BaseVC {
     
     func checkConnectedToInternet() {
         
-        if networkClient.isConnectedToInternet() == false {
+        if NetworkClient.sharedInstance.isConnectedToInternet == false {
             showConnectedToInternetAlert()
         }
     }

@@ -12,8 +12,6 @@ typealias Design = DesignModel
 
 open class DesignModel {
 
-
-    
     // Fonts Size
     static let small: CGFloat = 13.0
     static let medium: CGFloat = 16.0

@@ -8,6 +8,8 @@
 
 import UIKit
 
+fileprivate let PER_PAGE = 20
+
 class ListUsersVC: BaseTableVC {
     // СДЕЛАТЬ ПАГИНАЦИЮ ДЛЯ МУСОРОК!!!
     
@@ -24,13 +26,11 @@ class ListUsersVC: BaseTableVC {
     // просмотреть трекер про на свифт
     // подтянуть пару примеров нотификаций
     
-    
-    var refreshControl: UIRefreshControl!
-    var shouldLoadMore: Bool!
-    var nextPage : Int!
-    var PER_PAGE = 20
-    var users = [User]()
-    var isShowSpinner: Bool = false
+    private var refreshControl: UIRefreshControl!
+    private var shouldLoadMore: Bool!
+    private var nextPage: Int!
+    private var users = [User]()
+    private var isShowSpinner = false
 
     // MARK: - Lifecycle
     
@@ -63,6 +63,7 @@ class ListUsersVC: BaseTableVC {
                                  action: #selector(getUserList),
                                  for: .valueChanged)
         tableView.addSubview(refreshControl)
+        
     }
     
     
@@ -103,11 +104,9 @@ class ListUsersVC: BaseTableVC {
 
 }
 
-
 // MARK: - NetworkClient
 
 extension ListUsersVC {
-    
     
     @objc func getUserList() {
         shouldLoadMore = false
@@ -120,9 +119,9 @@ extension ListUsersVC {
     
     func loadUserList() {
         
-        networkClient.getUserList(nextPage: nextPage,
-                                  perPage: PER_PAGE,
-                                  success:
+        NetworkClient.sharedInstance.getUserList(nextPage: nextPage,
+                                                 perPage: PER_PAGE,
+                                                 success:
             { [weak self] (listUsers) in
                 guard let self = self else { return }
                 
@@ -132,15 +131,15 @@ extension ListUsersVC {
                         self.users.append(user)
                     }
                     self.reloadTableView()
-                    self.shouldLoadMore = users.count == self.PER_PAGE
+                    self.shouldLoadMore = users.count == PER_PAGE
                     print(">>>>>>self.users.count = \(self.users.count)")
-
+                    
                 }
                 self.refreshControl.endRefreshing()
                 self.hideSpinner()
                 self.isShowSpinner = false
             },
-                                  failure:
+                                                 failure:
             { [weak self] (message) in
                 guard let self = self else { return }
                 self.refreshControl.endRefreshing()
@@ -151,6 +150,7 @@ extension ListUsersVC {
     }
 
 }
+
 // MARK: - UITableViewDelegate UICollectionViewDataSource
 
 extension ListUsersVC {

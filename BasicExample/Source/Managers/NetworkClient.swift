@@ -11,6 +11,12 @@ import Alamofire
 //import SwiftKeychainWrapper
 
 final class NetworkClient: NSObject {
+
+    static let sharedInstance: NetworkClient = { return NetworkClient() }()
+    
+    override private init() {
+      super.init()
+    }
     
     enum ContentType: String {
         case json = "application/json"
@@ -27,6 +33,10 @@ final class NetworkClient: NSObject {
     }
     
     let userDefaults = UserDefaults.standard
+    
+    var isConnectedToInternet: Bool? {
+        return NetworkReachabilityManager()?.isReachable
+    }
     
     private static var headers: HTTPHeaders {
         return [
@@ -627,7 +637,7 @@ final class NetworkClient: NSObject {
 
                     guard let data = response.data,
                         let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] else {
-                            if self.isConnectedToInternet() == false {
+                            if self.isConnectedToInternet == false {
                                 failure?("This app requires an Internet connection")
                             } else {
                                 failure?("Not data. Please pull to refresh")
@@ -649,10 +659,6 @@ final class NetworkClient: NSObject {
                         })
                     }
         }
-    }
-    
-    func isConnectedToInternet() -> Bool {
-        return NetworkReachabilityManager()!.isReachable
     }
     
 }

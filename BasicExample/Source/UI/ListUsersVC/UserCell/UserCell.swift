@@ -18,6 +18,7 @@ class UserCell: BaseTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     func setUser(_ user: User) {

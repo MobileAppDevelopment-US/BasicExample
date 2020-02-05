@@ -8,7 +8,7 @@
 
 import UIKit
 
-// срабатывает перед тапом на любые вью с типом TapGestureRecognizer удобно делать вью выделение при тапе
+// triggered before tap on any view with type TapGestureRecognizer it is convenient to make a view selection on tap
 
 class TapGestureRecognizer: UITapGestureRecognizer {
     
